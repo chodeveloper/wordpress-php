@@ -1,0 +1,60 @@
+/*
+Theme Name:     Twentyseventeen-child
+Description:    Twentyseventeen child theme.
+Author:         Heejeong  Cho
+Template:       twentyseventeen
+Version:        0.1.0
+*/
+
+.site-title {
+    font-size: 4.75rem;
+    line-height: 1.25;
+}
+
+@media screen and (min-width: 48em) {
+
+    body:not(.has-sidebar):not(.page-one-column) .page-header,
+    body.has-sidebar.error404 #primary .page-header,
+    body.page-two-column:not(.archive) #primary .entry-header,
+    body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+        width: 100%;
+    }
+
+    .blog:not(.has-sidebar) #primary article,
+    .archive:not(.page-one-column):not(.has-sidebar) #primary article,
+    .search:not(.has-sidebar) #primary article,
+    .error404:not(.has-sidebar) #primary .page-content,
+    .error404.has-sidebar #primary .page-content,
+    body.page-two-column:not(.archive) #primary .entry-content,
+    body.page-two-column #comments {
+        float: left;
+        width: 58%;
+    }
+
+    #secondary {
+        padding: 1em;
+        width: 36%;
+        float: right;
+    }
+
+    /* mind the media query... what will happen here under min-width: 48em? */
+    body.page:not(.twentyseventeen-front-page) .entry-title {
+        color: rgb(119, 22, 22);
+        font-size: 2.2rem;
+    }
+}
+
+body.has-header-image .site-title,
+body.has-header-video .site-title,
+body.has-header-image .site-title a,
+body.has-header-video .site-title a {
+    color: rgb(144, 226, 88);
+}
+
+/* .category-block {
+    background-color: #f4d5d5;
+    border-radius: 10px;
+    border: 2px solid #da5774;
+    padding: 2px;
+    margin: 5px 0px;
+} */
