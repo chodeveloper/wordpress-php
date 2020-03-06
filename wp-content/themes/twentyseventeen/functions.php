@@ -664,3 +664,13 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+/**
+ * Custom Header
+ */
+function my_custom_header_args( $args ) {
+	$args['default-image'] = get_theme_file_uri( '/assets/images/header.jpg' );
+	return $args;
+}
+add_filter( 'twentyseventeen_custom_header_args', 'my_custom_header_args' );

@@ -62,6 +62,10 @@ body.has-header-video .site-title a {
 .site-content {
     padding: 2.5em;
 }
+.wp-custom-header-video-button {
+    width: auto !important;
+    padding: 2px 5px !important;
+}
 
 .archive-post {
     padding: 1.5rem 0;
