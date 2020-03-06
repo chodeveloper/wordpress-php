@@ -11,6 +11,11 @@ if ( have_posts() ) :
         the_title( '<h1>', '</h1>' ); 
         the_content();
     endwhile; 
+    print("<br><p>🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾 Meow-yawn 🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾</p><br>");
+    rewind_posts();
+    while ( have_posts() ) : the_post(); 
+        the_content();
+    endwhile; 
 else: 
     _e( 'Sorry, no pages matched your criteria.', 'textdomain' ); 
 endif; 
