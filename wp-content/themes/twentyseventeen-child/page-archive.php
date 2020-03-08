@@ -5,9 +5,11 @@
 
 get_header();
 
-$args = array( 'post_type' =>  'post', 'orderby' => 'title' ); 
+$args = array( 'post_type' =>  'post', 'orderby' => 'title', 'order' => 'ASC' ); 
 $query = new WP_Query($args);
-
+?>
+<div class="wrap">
+<?php
 if ( $query->have_posts() ) : 
     while ( $query->have_posts() ) : $query->the_post(); 
 
@@ -52,5 +54,9 @@ if ( $query->have_posts() ) :
 else: 
     _e( 'Sorry, no pages matched your criteria.', 'textdomain' ); 
 endif; 
+?>
+   </div>
+<?php
+get_footer();
 
 ?>

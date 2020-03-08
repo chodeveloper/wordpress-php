@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: Page with post titles from php category
+* Template Name: Post with other post titles from php category
 * Template Post Type: post
 */
 

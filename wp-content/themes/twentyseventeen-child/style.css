@@ -26,7 +26,8 @@ Version:        0.1.0
     .error404:not(.has-sidebar) #primary .page-content,
     .error404.has-sidebar #primary .page-content,
     body.page-two-column:not(.archive) #primary .entry-content,
-    body.page-two-column #comments {
+    body.page-two-column #comments,
+    .two-column #primary {
         float: left;
         width: 58%;
     }
@@ -41,6 +42,15 @@ Version:        0.1.0
     body.page:not(.twentyseventeen-front-page) .entry-title {
         color: rgb(119, 22, 22);
         font-size: 2.2rem;
+    }
+
+    .site-footer {
+        margin-top: unset;
+    }
+
+    .panel-content .wrap {
+        padding-bottom: 2em;
+        padding-top: 3.5em;
     }
 }
 
@@ -59,17 +69,29 @@ body.has-header-video .site-title a {
     margin: 5px 0px;
 } */
 
-.site-content {
-    padding: 2.5em;
+/* Main Page */
+.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child):nth-child(even) {
+    border-top: none;
+    background-color: black;
+    color: white;
+}
+.page article:not(.has-post-thumbnail):nth-child(even) .panel-content .entry-title {
+    color: white !important;
 }
 .wp-custom-header-video-button {
     width: auto !important;
     padding: 2px 5px !important;
 }
 
+/* Archive Page */
+.site-content {
+    padding: 2.5em;
+}
+.page:not(.home) #content div.archive-post:not(:first-child) {
+    border-top: 1px dotted black;
+}
 .archive-post {
     padding: 1.5rem 0;
-    border-bottom: 1px dotted black;
 }
 .archive-post > * {
     margin: 0;
@@ -109,4 +131,15 @@ body.has-header-video .site-title a {
 
 .archive-post.php > h3 > a, .archive-post.php > div.info > span > a {
     color: coral;
+}
+
+
+/* Scroll Down Button */
+.site-header .site-navigation-fixed .menu-scroll-down {
+    display: block;
+}
+.site-header .site-navigation-fixed .menu-scroll-down .icon {
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
 }
